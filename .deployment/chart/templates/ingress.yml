@@ -8,7 +8,7 @@ spec:
   rules:
   - http:
       paths:
-        - path: /fragments/home
+        - path: /fragments/node
           backend:
             serviceName: {{ .Values.name }}
             servicePort: {{ .Values.service.port }}
