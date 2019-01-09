@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from 'react';
 import ReactDOM from 'react-dom';
 
-const Home = () => <div>Hello from Home!</div>;
+const Node = () => <div>Hello from Node!</div>;
 
-window.HomeComponent = Home;
+window.NodeComponent = Node;

@@ -8,7 +8,7 @@ Image:
   tag: v1
   pullPolicy: Never
 
-name: fragment-home
+name: fragment-node
 namespace: default
 
 service:
