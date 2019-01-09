@@ -1,0 +1,4 @@
+{
+  "bundlePath": "{{ bundlePath }}",
+  "componentName": "HomeComponent"
+}

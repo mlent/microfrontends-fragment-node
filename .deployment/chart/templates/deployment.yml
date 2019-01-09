@@ -1,0 +1,41 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: {{ .Values.name }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    name: {{ .Values.name }}
+    namespace: {{ .Values.namespace }}
+spec:
+  replicas: {{ .Values.Replicas }}
+  selector:
+    matchLabels:
+      name: {{ .Values.name }}
+      namespace: {{ .Values.namespace }}
+  template:
+    metadata:
+      labels:
+        name: {{ .Values.name }}
+        namespace: {{ .Values.namespace }}
+    spec:
+      containers:
+      - name: {{ .Values.name }}
+        image: "{{ .Values.Image.name }}:{{ .Values.Image.tag }}"
+        imagePullPolicy: {{ .Values.Image.pullPolicy }}
+        env:
+          - name: PORT
+            value: {{ .Values.service.port | quote }}
+        ports:
+          - name: http
+            containerPort: {{ .Values.service.port }}
+            protocol: TCP
+      {{ if .Values.isDev }}
+        volumeMounts:
+          - mountPath: {{ .Values.volume.mountPath }}
+            name: {{ .Values.volume.name }}
+            readOnly: false
+      volumes:
+        - name: {{ .Values.volume.name }}
+          hostPath:
+            path: {{ .Values.volume.path }}
+      {{ end }}
