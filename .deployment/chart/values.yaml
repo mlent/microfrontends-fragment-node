@@ -6,7 +6,7 @@ Image:
   repository: localhost
   name: fragment-node
   tag: v1
-  pullPolicy: Never
+  pullPolicy: Always
 
 name: fragment-node
 namespace: default
