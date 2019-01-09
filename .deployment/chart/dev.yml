@@ -4,7 +4,7 @@ RevisionHistoryLimit: 3
 
 Image:
   repository: localhost
-  name: fragment-home
+  name: fragment-node
   tag: v1
   pullPolicy: Never
 
@@ -21,5 +21,5 @@ isDev: true
 # Supply our local development paths
 volume:
   name: host-volume
-  path: /opt/microfrontends/fragment-home/dist
+  path: /opt/microfrontends/fragment-node/dist
   mountPath: /usr/src/app/dist

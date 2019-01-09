@@ -8,7 +8,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, '/dist'),
     publicPath: '/',
-    filename: 'home.[hash].bundle.js'
+    filename: 'node.[hash].bundle.js'
   },
   devServer: {
     contentBase: './dist'
@@ -19,7 +19,7 @@ module.exports = {
       path: path.join(__dirname, '/dist'),
       prettyPrint: true,
       metadata: {
-        componentName: 'HomeComponent'
+        componentName: 'NodeComponent'
       }
     })
   ],

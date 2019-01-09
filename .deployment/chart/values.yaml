@@ -4,7 +4,7 @@ RevisionHistoryLimit: 3
 
 Image:
   repository: localhost
-  name: fragment-home
+  name: fragment-node
   tag: v1
   pullPolicy: Never
 
