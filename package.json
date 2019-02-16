@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node app.js",
-    "start:dev": "webpack-dev-server --config ./webpack.config.js --mode=development",
+    "start:dev": "webpack --watch --config ./webpack.config.js --mode=development",
     "build": "mkdir -p dist && yarn build:js",
     "build:js": "webpack --mode=production",
     "dev": "webpack --mode=development --watch"
