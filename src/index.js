@@ -1,6 +1,21 @@
 import React, { Fragment, Component } from 'react';
 import ReactDOM from 'react-dom';
+import { css } from '@emotion/core';
+import styled from '@emotion/styled';
+import Container from './components/Container';
+import Headline from './components/Headline';
+import Button from './components/Button';
 
-const Node = () => <div>Hello JSKongress!</div>;
+const Root = ({ counter, onIncrementCounter, theme }) => {
+  return (
+    <Container theme={theme}>
+      <Headline theme={theme}>Hello JSKongress!</Headline>
+      <p>Count: {counter}</p>
+      <Button theme={theme} onClick={onIncrementCounter}>
+        Increment
+      </Button>
+    </Container>
+  );
+};
 
-window.NodeComponent = Node;
+window.NodeComponent = Root;
