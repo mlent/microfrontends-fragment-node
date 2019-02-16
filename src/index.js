@@ -5,10 +5,12 @@ import styled from '@emotion/styled';
 import Container from './components/Container';
 import Headline from './components/Headline';
 import Button from './components/Button';
+import Label from './components/Label';
 
 const Root = ({ counter, onIncrementCounter, theme }) => {
   return (
     <Container theme={theme}>
+      <Label theme={theme}>fragment-node</Label>
       <Headline theme={theme}>Hello JSKongress!</Headline>
       <h2>
         Count: <strong>{counter}</strong>
