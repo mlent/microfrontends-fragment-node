@@ -11,7 +11,7 @@ const Root = ({ counter, onIncrementCounter, theme }) => {
   return (
     <Container theme={theme}>
       <Label theme={theme}>fragment-node</Label>
-      <Headline theme={theme}>Hello JSKongress!</Headline>
+      <Headline theme={theme}>Hello beautiful people!</Headline>
       <h2>
         Count: <strong>{counter}</strong>
       </h2>
