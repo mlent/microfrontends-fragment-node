@@ -10,7 +10,9 @@ const Root = ({ counter, onIncrementCounter, theme }) => {
   return (
     <Container theme={theme}>
       <Headline theme={theme}>Hello JSKongress!</Headline>
-      <p>Count: {counter}</p>
+      <h2>
+        Count: <strong>{counter}</strong>
+      </h2>
       <Button theme={theme} onClick={onIncrementCounter}>
         Increment
       </Button>
