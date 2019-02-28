@@ -10,8 +10,8 @@ import Label from './components/Label';
 const Root = ({ counter, onIncrementCounter, theme }) => {
   return (
     <Container theme={theme}>
-      <Label theme={theme}>fragment-node</Label>
-      <Headline theme={theme}>Hello beautiful people!</Headline>
+      <Label theme={theme}>fragment</Label>
+      <Headline theme={theme}>Hello JS Kongress!</Headline>
       <h2>
         Count: <strong>{counter}</strong>
       </h2>
